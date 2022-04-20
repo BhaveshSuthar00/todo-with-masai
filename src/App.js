@@ -1,13 +1,17 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import SideBar from './Components/SideBar/SideBar';
 import AllRoutes from './Router/Routes';
 
 function App() {
   return (
-    <Flex justifyContent="space-between">
+    <Stack direction={{base : "row", lg : 'row', md : "column", sm : "column"}}>
+      <Box p={4} boxShadow='xl'>
       <SideBar />
-      <AllRoutes />
-    </Flex>
+      </Box>
+      <Box>
+        <AllRoutes />
+      </Box>
+    </Stack>
   );
 }
 
